@@ -8,6 +8,12 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
@@ -15,17 +21,11 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 11,
+  "id": 16,
   "links": [],
   "panels": [
     {
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 6,
         "w": 5,
@@ -38,10 +38,9 @@
         "content": "\n# Lighthouse Metrics\n\nMetrics collected from a Lighthouse Validator Client.\n\n\n\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -52,7 +51,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -88,7 +86,7 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "lighthouse_info",
@@ -119,7 +117,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -151,7 +148,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -220,7 +217,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -252,7 +248,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -314,12 +310,6 @@
     },
     {
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -332,10 +322,9 @@
         "content": "\n### Consensus\n\nOverview of consensus between nodes.\n\n\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -347,7 +336,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -378,7 +366,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -443,7 +431,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -474,7 +461,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -539,7 +526,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -570,7 +556,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -629,12 +615,6 @@
     },
     {
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -647,10 +627,9 @@
         "content": "\n### Consensus\n\nOverview of consensus between nodes.\n\n\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -663,7 +642,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -695,7 +673,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -762,7 +740,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -794,7 +771,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -863,7 +840,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -895,7 +871,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -957,12 +933,6 @@
     },
     {
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -975,10 +945,9 @@
         "content": "\n### Consensus\n\nOverview of consensus between nodes.\n\n\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -991,7 +960,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1023,7 +991,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1092,7 +1060,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1124,7 +1091,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1193,7 +1160,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1225,7 +1191,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1294,7 +1260,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1326,7 +1291,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1388,12 +1353,6 @@
     },
     {
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -1406,10 +1365,9 @@
         "content": "\n### Consensus\n\nOverview of consensus between nodes.\n\n\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1422,7 +1380,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1454,7 +1411,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1523,7 +1480,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1555,7 +1511,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1624,7 +1580,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1656,7 +1611,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1725,7 +1680,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1757,7 +1711,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1819,12 +1773,6 @@
     },
     {
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -1837,10 +1785,9 @@
         "content": "\n### Logs\n\nOverview of logs (includes beacon nodes)\n\n\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1853,7 +1800,6 @@
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1885,7 +1831,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1951,7 +1897,6 @@
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1983,7 +1928,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2049,7 +1994,6 @@
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -2083,7 +2027,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2149,7 +2093,6 @@
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -2181,7 +2124,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2242,7 +2185,7 @@
     }
   ],
   "refresh": "10s",
-  "schemaVersion": 27,
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -2279,5 +2222,5 @@
   "timezone": "",
   "title": "Validator Client",
   "uid": "3Onh0kAGk",
-  "version": 10
+  "version": 1
 }

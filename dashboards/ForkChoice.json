@@ -8,6 +8,12 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
@@ -15,11 +21,10 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
+  "id": 8,
   "links": [],
   "panels": [
     {
-      "content": "\n# Fork Choice Metrics\n\nMetrics collected regarding the LMD GHOST fork choice function.\n\nInvovles the `BeaconChain` analysing all non-finalized fork blocks and choosing a winning head block. Utilizes the \"reduced tree\" fork choice method.\n\nCollected from the [`beacon_chain`](https://github.com/sigp/lighthouse/tree/master/beacon_node/beacon_chain) and [`lmd_ghost`](https://github.com/sigp/lighthouse/tree/master/eth2/lmd_ghost) crates.\n\n\n\n",
       "datasource": null,
       "gridPos": {
         "h": 6,
@@ -29,11 +34,13 @@
       },
       "id": 11,
       "links": [],
-      "mode": "markdown",
-      "options": {},
+      "options": {
+        "content": "\n# Fork Choice Metrics\n\nMetrics collected regarding the LMD GHOST fork choice function.\n\nInvovles the `BeaconChain` analysing all non-finalized fork blocks and choosing a winning head block. Utilizes the \"reduced tree\" fork choice method.\n\nCollected from the [`beacon_chain`](https://github.com/sigp/lighthouse/tree/master/beacon_node/beacon_chain) and [`lmd_ghost`](https://github.com/sigp/lighthouse/tree/master/eth2/lmd_ghost) crates.\n\n\n\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -44,6 +51,12 @@
       "dashes": false,
       "datasource": "Prometheus",
       "description": "The `BeaconChain::fork_choice` function.",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -52,6 +65,7 @@
         "x": 9,
         "y": 0
       },
+      "hiddenSeries": false,
       "id": 2,
       "legend": {
         "avg": false,
@@ -67,9 +81,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -128,7 +143,6 @@
       }
     },
     {
-      "content": "\n### Core find_head() function\n\n\nThe core function which reads the block tree and finds a winning block.\n",
       "datasource": null,
       "gridPos": {
         "h": 2,
@@ -138,16 +152,17 @@
       },
       "id": 27,
       "links": [],
-      "mode": "markdown",
-      "options": {},
+      "options": {
+        "content": "\n### Core find_head() function\n\n\nThe core function which reads the block tree and finds a winning block.\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
     {
-      "content": "\n### Usage rates (per minute)\n\n\nRequests, head changes and re-org count.",
       "datasource": null,
       "gridPos": {
         "h": 2,
@@ -157,11 +172,13 @@
       },
       "id": 14,
       "links": [],
-      "mode": "markdown",
-      "options": {},
+      "options": {
+        "content": "\n### Usage rates (per minute)\n\n\nRequests, head changes and re-org count.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -171,6 +188,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -179,6 +202,7 @@
         "x": 0,
         "y": 8
       },
+      "hiddenSeries": false,
       "id": 3,
       "legend": {
         "avg": false,
@@ -194,9 +218,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -259,6 +284,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -267,6 +298,7 @@
         "x": 15,
         "y": 8
       },
+      "hiddenSeries": false,
       "id": 22,
       "legend": {
         "avg": false,
@@ -282,9 +314,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -342,7 +375,6 @@
       }
     },
     {
-      "content": "\n### Block fork-choice processing times\n\n\nThe time it takes to update the fork-choice block-graph with a block (and all included attestations). Does not find the head.\n",
       "datasource": null,
       "gridPos": {
         "h": 2,
@@ -352,11 +384,13 @@
       },
       "id": 18,
       "links": [],
-      "mode": "markdown",
-      "options": {},
+      "options": {
+        "content": "\n### Block fork-choice processing times\n\n\nThe time it takes to update the fork-choice block-graph with a block (and all included attestations). Does not find the head.\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -366,6 +400,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -374,6 +414,7 @@
         "x": 15,
         "y": 14
       },
+      "hiddenSeries": false,
       "id": 15,
       "legend": {
         "avg": false,
@@ -389,9 +430,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -454,6 +496,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -462,6 +510,7 @@
         "x": 0,
         "y": 16
       },
+      "hiddenSeries": false,
       "id": 17,
       "legend": {
         "avg": false,
@@ -477,9 +526,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -542,6 +592,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -550,6 +606,7 @@
         "x": 15,
         "y": 20
       },
+      "hiddenSeries": false,
       "id": 16,
       "legend": {
         "avg": false,
@@ -565,9 +622,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -625,7 +683,6 @@
       }
     },
     {
-      "content": "\n### Attestation fork-choice processing times\n\n\nThe time it takes to update the fork-choice block-graph with an attestation, which may come in a block, from the network or other source.\n",
       "datasource": null,
       "gridPos": {
         "h": 2,
@@ -635,11 +692,13 @@
       },
       "id": 20,
       "links": [],
-      "mode": "markdown",
-      "options": {},
+      "options": {
+        "content": "\n### Attestation fork-choice processing times\n\n\nThe time it takes to update the fork-choice block-graph with an attestation, which may come in a block, from the network or other source.\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -649,6 +708,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -657,6 +722,7 @@
         "x": 0,
         "y": 24
       },
+      "hiddenSeries": false,
       "id": 19,
       "legend": {
         "avg": false,
@@ -672,9 +738,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -732,7 +799,6 @@
       }
     },
     {
-      "content": "\n### Excess find_head() rate.\n\n\nTracks the ratio between calls to `find_head()` that change the head and those that don't. A rate of `1` is theoretically ideal, less means we called `find_head` when we had no new information that would cause a change.",
       "datasource": null,
       "gridPos": {
         "h": 3,
@@ -742,11 +808,13 @@
       },
       "id": 21,
       "links": [],
-      "mode": "markdown",
-      "options": {},
+      "options": {
+        "content": "\n### Excess find_head() rate.\n\n\nTracks the ratio between calls to `find_head()` that change the head and those that don't. A rate of `1` is theoretically ideal, less means we called `find_head` when we had no new information that would cause a change.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -756,6 +824,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -764,6 +838,7 @@
         "x": 15,
         "y": 29
       },
+      "hiddenSeries": false,
       "id": 13,
       "legend": {
         "avg": false,
@@ -779,9 +854,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -845,6 +921,12 @@
       "dashes": false,
       "datasource": "Prometheus",
       "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -853,6 +935,7 @@
         "x": 0,
         "y": 30
       },
+      "hiddenSeries": false,
       "id": 24,
       "legend": {
         "avg": false,
@@ -868,9 +951,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -934,6 +1018,12 @@
       "dashes": false,
       "datasource": "Prometheus",
       "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -942,6 +1032,7 @@
         "x": 6,
         "y": 30
       },
+      "hiddenSeries": false,
       "id": 25,
       "legend": {
         "avg": false,
@@ -957,9 +1048,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1017,7 +1109,6 @@
       }
     },
     {
-      "content": "\n### Head Updating\n\nDistinct from actually finding the head, these metrics track how long it takes the update the BeaconChain head once a new one has been found (or not)",
       "datasource": null,
       "gridPos": {
         "h": 2,
@@ -1027,11 +1118,13 @@
       },
       "id": 12,
       "links": [],
-      "mode": "markdown",
-      "options": {},
+      "options": {
+        "content": "\n### Head Updating\n\nDistinct from actually finding the head, these metrics track how long it takes the update the BeaconChain head once a new one has been found (or not)",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1041,6 +1134,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1063,10 +1162,8 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1129,6 +1226,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1151,10 +1254,8 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1217,6 +1318,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1239,10 +1346,8 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1305,6 +1410,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1327,10 +1438,8 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1393,6 +1502,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1415,10 +1530,8 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1481,6 +1594,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1503,10 +1622,8 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1565,7 +1682,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 20,
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1603,5 +1720,5 @@
   "timezone": "",
   "title": "Fork Choice",
   "uid": "tQbhcCATWk",
-  "version": 7
+  "version": 1
 }

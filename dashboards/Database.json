@@ -1,40 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "7.1.3"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": "7.1.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -44,6 +8,12 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
@@ -51,18 +21,11 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
+  "id": 7,
   "links": [],
   "panels": [
     {
-      "content": "\n# Database Metrics\n\nMetrics collected from a Lighthouse Beacon Node regarding the core key-value database (e.g., LevelDB).\n\nCollected from the [`store`](https://github.com/sigp/lighthouse/tree/master/beacon_node/store) crate.\n\n\n\n",
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 6,
         "w": 9,
@@ -71,15 +34,13 @@
       },
       "id": 14,
       "links": [],
-      "mode": "markdown",
       "options": {
         "content": "\n# Database Metrics\n\nMetrics collected from a Lighthouse Beacon Node regarding the core key-value database (e.g., LevelDB).\n\nCollected from the [`store`](https://github.com/sigp/lighthouse/tree/master/beacon_node/store) crate.\n\n\n\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.1.0",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -89,13 +50,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -119,8 +74,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -179,14 +137,7 @@
       }
     },
     {
-      "content": "\n### Reads per Minute\n\n\nThe global database reads per minute, expressed as operations and a cumulative bytes value.\n",
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 12,
@@ -195,27 +146,18 @@
       },
       "id": 25,
       "links": [],
-      "mode": "markdown",
       "options": {
         "content": "\n### Reads per Minute\n\n\nThe global database reads per minute, expressed as operations and a cumulative bytes value.\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.1.0",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
     {
-      "content": "\n### Writes per Minute\n\n\nThe global database writes per minute, expressed as operations and a cumulative bytes value.\n",
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 12,
@@ -224,15 +166,13 @@
       },
       "id": 26,
       "links": [],
-      "mode": "markdown",
       "options": {
         "content": "\n### Writes per Minute\n\n\nThe global database writes per minute, expressed as operations and a cumulative bytes value.\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.1.0",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -242,13 +182,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -272,8 +206,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -336,13 +273,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -366,8 +297,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -430,13 +364,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -460,8 +388,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -524,13 +455,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -554,8 +479,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -613,14 +541,7 @@
       }
     },
     {
-      "content": "\n### Beacon state read/write overhead\n\n\nThe encoding/decoding overheads of storing `BeaconState` (excluding action bytes read/write operations).\n",
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -629,15 +550,13 @@
       },
       "id": 29,
       "links": [],
-      "mode": "markdown",
       "options": {
         "content": "\n### Beacon state read/write overhead\n\n\nThe encoding/decoding overheads of storing `BeaconState` (excluding action bytes read/write operations).\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.1.0",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -647,13 +566,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -677,8 +590,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -741,13 +657,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -771,8 +681,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -830,14 +743,7 @@
       }
     },
     {
-      "content": "\n### BeaconState read/writes\n\n\nNumber of `BeaconState` read/writes in operations and cumulative bytes.\n",
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 10,
         "w": 12,
@@ -846,15 +752,13 @@
       },
       "id": 28,
       "links": [],
-      "mode": "markdown",
       "options": {
         "content": "\n### BeaconState read/writes\n\n\nNumber of `BeaconState` read/writes in operations and cumulative bytes.\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.1.0",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -864,13 +768,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -894,8 +792,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -958,13 +859,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -988,8 +883,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1052,13 +950,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1082,8 +974,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1146,13 +1041,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1176,8 +1065,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1235,14 +1127,7 @@
       }
     },
     {
-      "content": "\n### Beacon block read/write overhead\n\n\nThe encoding/decoding overheads of storing `BeaconBlock` (excluding action bytes read/write operations).\n",
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -1251,15 +1136,13 @@
       },
       "id": 27,
       "links": [],
-      "mode": "markdown",
       "options": {
         "content": "\n### Beacon block read/write overhead\n\n\nThe encoding/decoding overheads of storing `BeaconBlock` (excluding action bytes read/write operations).\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.1.0",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1269,13 +1152,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1300,7 +1177,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1363,13 +1240,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1394,7 +1265,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1457,13 +1328,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1486,7 +1351,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1549,13 +1414,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1578,7 +1437,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1636,14 +1495,7 @@
       }
     },
     {
-      "content": "\n### BeaconBlock read/writes\n\n\nNumber of `BeaconBlock` read/writes in operations and cumulative bytes.\n",
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 10,
         "w": 12,
@@ -1652,15 +1504,13 @@
       },
       "id": 36,
       "links": [],
-      "mode": "markdown",
       "options": {
         "content": "\n### BeaconBlock read/writes\n\n\nNumber of `BeaconBlock` read/writes in operations and cumulative bytes.\n",
         "mode": "markdown"
       },
-      "pluginVersion": "7.1.0",
+      "pluginVersion": "8.1.5",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1670,13 +1520,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1699,7 +1543,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1762,13 +1606,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
+      "datasource": "Prometheus",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1791,7 +1629,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1850,7 +1688,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 26,
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
